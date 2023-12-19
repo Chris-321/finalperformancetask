@@ -1,10 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://duemjd0qhekrw"]
+[gd_scene load_steps=5 format=3 uid="uid://cgqoabsddmprc"]
 
-[ext_resource type="Texture2D" uid="uid://bwmny50vdxvr1" path="res://assets/wallpaperCabin.jpg" id="1_85gfb"]
+[ext_resource type="Texture2D" uid="uid://bwmny50vdxvr1" path="res://wallpaperCabin.jpg" id="1_85gfb"]
+[ext_resource type="Texture2D" uid="uid://vs551jdj25r0" path="res://player.png" id="2_glep1"]
+[ext_resource type="Script" path="res://Player.gd" id="3_roovs"]
+[ext_resource type="Texture2D" uid="uid://clwpo83yorvtm" path="res://enemy.png" id="4_u54ty"]
 
 [node name="World" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.61, 0.61)
+scale = Vector2(0.6, 0.5425)
 texture = ExtResource("1_85gfb")
 centered = false
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(255, 828)
+script = ExtResource("3_roovs")
+
+[node name="Enemy" type="Sprite2D" parent="."]
+position = Vector2(988.25, 430.375)
+scale = Vector2(0.377226, 0.319322)
+texture = ExtResource("4_u54ty")
+
+[node name="Player2" type="Sprite2D" parent="."]
+position = Vector2(323, 424)
+texture = ExtResource("2_glep1")
